@@ -52,8 +52,8 @@ pipeline {
         }
         stage('SonarQube analysis') {
             steps {
-                withSonarQubeEnv(credentialsId: 'sonar_server', installationName: 'servidor_sonarqube_mma106') {
-                    sh 'mvn sonar:sonar -Dsonar.projectKey=hmis-coches-mma106 '
+                withSonarQubeEnv(credentialsId: 'servidor_sonarqube_dlg383', installationName: 'servidor_sonarqube_dlg383') {
+                    sh 'mvn sonar:sonar -Dsonar.projectKey=hmis-coches-dlg383'
                
                 }
             }
